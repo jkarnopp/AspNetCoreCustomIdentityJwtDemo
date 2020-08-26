@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using AspNetCoreCustomIdentyJwtDemo.Models;
+﻿using AspNetCoreCustomIdentyJwtDemo.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
+using System;
 
 namespace AspNetCoreCustomIdentyJwtDemo.Data
 {
@@ -36,9 +33,6 @@ namespace AspNetCoreCustomIdentyJwtDemo.Data
                     .HasForeignKey(ur => ur.UserId)
                     .IsRequired();
             });
-
-            
         }
-
     }
 }

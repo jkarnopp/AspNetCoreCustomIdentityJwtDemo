@@ -1,7 +1,7 @@
-using System;
-using System.Threading.Tasks;
 using AspNetCoreCustomIdentyJwtDemo.Models;
 using Microsoft.AspNetCore.Identity;
+using System;
+using System.Threading.Tasks;
 
 namespace AspNetCoreCustomIdentyJwtDemo.Data
 {
@@ -29,7 +29,6 @@ namespace AspNetCoreCustomIdentyJwtDemo.Data
             {
                 await roleManager.CreateAsync(new ApplicationRole(userRole, userDesc, DateTime.Now));
             }
-            
 
             if (await userManager.FindByNameAsync("TestAdmin") == null)
             {
@@ -49,7 +48,6 @@ namespace AspNetCoreCustomIdentyJwtDemo.Data
                     await userManager.AddPasswordAsync(user, password);
                     await userManager.AddToRoleAsync(user, adminRole);
                 }
-                
             }
 
             if (await userManager.FindByNameAsync("TestUser") == null)
@@ -70,10 +68,7 @@ namespace AspNetCoreCustomIdentyJwtDemo.Data
                     await userManager.AddPasswordAsync(user, password);
                     await userManager.AddToRoleAsync(user, userRole);
                 }
-                
             }
-
-            
-        }  
+        }
     }
 }
